@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Life Link - Blood Donation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff0f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+    }
+
+    h1 {
+      margin-top: 50px;
+      font-size: 48px;
+      color: darkred;
+      text-align: center;
+    }
+
+    .blink-text {
+      margin: 30px 0;
+      font-size: 28px;
+      color: red;
+      font-weight: bold;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0.3; }
+      100% { opacity: 1; }
+    }
+
+    .rectangle-box {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 80%;
+      max-width: 600px;
+      height: 150px;
+      background-color: #ffe6e6;
+      border: 2px solid darkred;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+    }
+
+    .box-item {
+      width: 40%;
+      height: 80px;
+      background-color: #ff9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .box-item:hover {
+      transform: scale(1.05);
+    }
+
+    .or-text {
+      margin-top: 20px;
+      font-size: 14px;
+      color: darkred;
+    }
+
+    .register-text {
+      margin-top: 10px;
+      font-size: 15px;
+      color: darkred;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .register-text span {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>LIFE LINK</h1>
+
+  <div class="blink-text">EMERGENCY</div>
+
+  <div class="rectangle-box">
+    <div class="box-item" onclick="alert('Transport option coming soon!')">Transport</div>
+    <div class="box-item" onclick="window.location.href='blood-request.html'">Blood</div>
+  </div>
+
+  <div class="or-text">(or)</div>
+
+  <div class="register-text" onclick="window.location.href='donor-registration.html'">
+    Ready to donate blood? <span>Register Now</span>
+  </div>
+
+</body>
+</html>
