@@ -29,9 +29,9 @@ fileInput.addEventListener("change", () => {
 predictBtn.addEventListener("click", () => {
   if (!hasImage) return;
 
-  // Demo simulation: random prediction
+  
   const isFake = Math.random() > 0.5;
-  const confidence = (80 + Math.random() * 18).toFixed(1); // 80% - 98%
+  const confidence = (80 + Math.random() * 18).toFixed(1); 
 
   resultBox.innerHTML = `
     <div class="tag ${isFake ? "fake" : "real"}">
